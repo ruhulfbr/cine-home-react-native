@@ -34,7 +34,7 @@ const Drawer = createDrawerNavigator();
 const stackNav= () => {
     return(
       <Stack.Navigator>
-        <Stack.Screen name="Cine Time" component={Home} options={{headerShown:false}}/>
+        <Stack.Screen name="Cine Time" component={Search} options={{headerShown:false}}/>
         <Stack.Screen name="list" component={ListPage} options={{headerShown:false}}/>
       </Stack.Navigator>
     );
@@ -53,7 +53,8 @@ const App= () => {
         <Drawer.Screen name="Home" component={stackNav} options={{ drawerIcon: (({focused}) => <Icon name="home" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} />
         <Drawer.Screen name="Watch History" component={List} options={{ drawerIcon: (({focused}) => <Icon name="stopwatch-outline" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} />
         <Drawer.Screen name="My Favorite" component={List} options={{ drawerIcon: (({focused}) => <Icon name="ios-heart-circle-outline" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} />
-        <Drawer.Screen name="Network Stream" component={List} options={{ drawerIcon: (({focused}) => <Icon name="logo-playstation" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} />
+        {/* <Drawer.Screen name="Network Stream" component={List} options={{ drawerIcon: (({focused}) => <Icon name="logo-playstation" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} /> */}
+        <Drawer.Screen name="Network Stream" component={List} options={{ drawerIcon: (({focused}) => <Icon name="radio-outline" style={{color: textColor, marginRight:-15, fontSize:20}} />) }} />
         {/* <Drawer.Screen name="Category" component={Category} />
         <Drawer.Screen name="Search" component={Search} />
         <Drawer.Screen name="Movies" component={ListPage} />

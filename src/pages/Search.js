@@ -59,8 +59,15 @@ export default class Search extends Component {
             <Text style={{color:textColor, fontSize:20}}>No data found</Text>
           </View> */}
 
+          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:'50%'}}>
+            <Text>
+                <Icon style={{color:textColor, fontSize:35, transform: [{rotateY: '360deg'}]}} type="Fontisto" name={'spinner'} />
+                {/* <Image style={{}} source={require('../assets/img/logo.jpg')} /> */}
+            </Text>
+          </View>
 
-          <View style={{paddingLeft:15, paddingRight:15, marginTop:-5, paddingBottom:15}}>
+
+          {/* <View style={{paddingLeft:15, paddingRight:15, marginTop:-5, paddingBottom:15}}>
               <Text style={{color:textColor}}>Search result for : 
                 <Text style={{color:textColor, fontStyle:"italic"}}> fjsdfj</Text>
               </Text>
@@ -141,7 +148,7 @@ export default class Search extends Component {
             </SafeAreaView>
 
 
-            <View style={{height:20}}></View>
+            <View style={{height:20}}></View> */}
         </Content>
       </Container>
     );
