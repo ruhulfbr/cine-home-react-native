@@ -5,7 +5,7 @@ import {
     Image,
   } from 'react-native';
 import { Container, Header, View, Title, Content, Button, Left, Right, Body, Icon, Text, Input, Item } from 'native-base';
-import {appTitle, themeColor, bodyColor, iconColor, textColor, linkColor, commonStyle, deviceWidth, playVideo} from './../helper/AppHelper'
+import {appTitle, themeColor, bodyColor, iconColor, textColor, linkColor, commonStyle, deviceWidth, playVideo, Loader, NoDataFound} from './../helper/AppHelper'
 
 const cards = [
     {
@@ -55,19 +55,7 @@ export default class Search extends Component {
 
         <Content style={commonStyle.bodyContent}>
 
-          {/* <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:'60%'}}>
-            <Text style={{color:textColor, fontSize:20}}>No data found</Text>
-          </View> */}
-
-          <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:'50%'}}>
-            <Text>
-                <Icon style={{color:textColor, fontSize:35, transform: [{rotateY: '360deg'}]}} type="Fontisto" name={'spinner'} />
-                {/* <Image style={{}} source={require('../assets/img/logo.jpg')} /> */}
-            </Text>
-          </View>
-
-
-          {/* <View style={{paddingLeft:15, paddingRight:15, marginTop:-5, paddingBottom:15}}>
+          <View style={{paddingLeft:15, paddingRight:15, marginTop:-5, paddingBottom:15}}>
               <Text style={{color:textColor}}>Search result for : 
                 <Text style={{color:textColor, fontStyle:"italic"}}> fjsdfj</Text>
               </Text>
@@ -144,11 +132,12 @@ export default class Search extends Component {
                         source={{uri: cards[1].image}}
                     />
                 </View>
-
             </SafeAreaView>
 
+            <Loader />
 
-            <View style={{height:20}}></View> */}
+            <View style={{height:50}}></View>
+                
         </Content>
       </Container>
     );

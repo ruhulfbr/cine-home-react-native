@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
+    Text,
     StatusBar,
     SafeAreaView,
     Dimensions, Linking, Platform
   } from 'react-native';
 
 import SendIntentAndroid from "react-native-send-intent";
+import Spinner from './Spinner';
 
   export let appTitle = "Cine Time";
   export let themeColor = "#1c2939";
@@ -17,6 +19,30 @@ import SendIntentAndroid from "react-native-send-intent";
   export let linkColor = '#408ddf';
   export let deviceWidth = Dimensions.get('window').width;
   export let deviceHeight = Dimensions.get('window').height;
+
+  export function LoaderFullPage(){
+      return(
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:'60%'}}>            
+                <Spinner />
+            </View>
+      )
+  }
+
+  export function Loader(){
+        return(
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center'}}>            
+                <Spinner />
+            </View>
+        )
+    }
+
+    export function NoDataFound(){
+        return(
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', alignSelf: 'center', paddingTop:'60%'}}>
+                <Text style={{color:textColor, fontSize:20}}>No data found</Text>
+            </View>
+        )
+    }
 
   export const commonStyle = StyleSheet.create({
      bodyContent:{

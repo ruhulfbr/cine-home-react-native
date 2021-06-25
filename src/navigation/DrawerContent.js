@@ -22,7 +22,7 @@ export default function DrawerContent(props){
             <DrawerContentScrollView {...props}>
                 <View styles={styles.topPart}>
                     <View style={{alignItems:'center'}}>
-                        <Image style={styles.logo} source={require('../assets/img/logo.jpg')} />
+                        <Image style={styles.logo} source={require('../assets/img/logo.png')} />
                     </View>
                     <View style={{padding:0, marginTop:15}}>
                         {/* <Text style={{fontSize:14, color:textColor, paddingLeft:17, fontSize:16}}>
@@ -123,8 +123,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logo:{
-        width:100,
-        height: 100,
-        borderRadius:5
+        width:80,
+        height: 80,
+        marginTop:10,
+        borderRadius:50
     }
 });

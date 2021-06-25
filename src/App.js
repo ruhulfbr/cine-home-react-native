@@ -34,7 +34,7 @@ const Drawer = createDrawerNavigator();
 const stackNav= () => {
     return(
       <Stack.Navigator>
-        <Stack.Screen name="Cine Time" component={Search} options={{headerShown:false}}/>
+        <Stack.Screen name="Cine Time" component={Home} options={{headerShown:false}}/>
         <Stack.Screen name="list" component={ListPage} options={{headerShown:false}}/>
       </Stack.Navigator>
     );
